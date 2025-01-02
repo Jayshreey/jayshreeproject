@@ -1,0 +1,36 @@
+03 October 2024
+
+ALTER TABLE `role_master` CHANGE `role_name` `role_name` VARCHAR(22) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+
+ALTER TABLE `role_master` CHANGE `role_name` `role_name` VARCHAR(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+
+
+22 November 2024
+ALTER TABLE `worklog_master` ADD `created_date` VARCHAR(55) NOT NULL AFTER `status`;
+
+29 November 2024
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Tele meeting' WHERE `nca_activity_type_master`.`entity_id` = 1;
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Physical Meeting' WHERE `nca_activity_type_master`.`entity_id` = 2;
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Online meeting' WHERE `nca_activity_type_master`.`entity_id` = 3;
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Workshop attended' WHERE `nca_activity_type_master`.`entity_id` = 4;
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Informal Activity' WHERE `nca_activity_type_master`.`entity_id` = 5;
+UPDATE `nca_activity_type_master` SET `nca_activity_type` = 'Orientation' WHERE `nca_activity_type_master`.`entity_id` = 6;
+ALTER TABLE `prospect_master` CHANGE `conversion_stage` `conversion_stage` INT(11) NULL DEFAULT NULL COMMENT '1 = Not Started\r\n2 = in Process\r\n3 = Converted to ECS\r\n4=Contacted\r\n5=Not Contacted';
+
+ALTER TABLE `prospect_tracking_master` ADD `remark` INT(5) NOT NULL AFTER `tracking_status`;
+DELETE FROM nca_activity_type_master WHERE `nca_activity_type_master`.`entity_id` = 7;
+
+03 December 2024
+ALTER TABLE `prospect_master` CHANGE `conversion_stage` `conversion_stage` INT(11) NULL DEFAULT NULL COMMENT '1 = Not Started\r\n2 = Not Contacted\r\n3 = Converted to ECS\r\n4=Contacted\r\n';
+
+04 December 2024
+UPDATE `actionable_master` SET `actionable_name` = 'Assistance as a task management tool' WHERE `actionable_master`.`entity_id` = 10;
+
+
+13 December 2024
+ALTER TABLE `user_login` ADD `profile_image` VARCHAR(150) NOT NULL AFTER `emp_id`;
+
+
+17 December 2024
+UPDATE `role_master` SET `role_name` = 'Service Executive' WHERE `role_master`.`entity_id` = 7;
+INSERT INTO `role_master` (`entity_id`, `role_name`, `role_type`, `status`) VALUES (8, 'Back Office Assistant', '3', '1');

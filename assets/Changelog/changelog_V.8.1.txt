@@ -1,0 +1,65 @@
+
+Project Name: Valex- Bootstrap 5 Admin & Dashboard Template
+
+Version : V.8.1
+
+Updated-date:  12-June-2024
+ 
+Updates :-     
+	1) Bootstrap version is updated.
+	2) Updated Remix Icons and Bootstrap Icons.
+	3) Updated some JS files and added one new JS file.
+	4) Added a new HTML page.
+	5) Added new elements to the helpers.html page.
+
+**********************************************************************************************************************************************
+
+----------------------------------------------------------------------
+1) Bootstrap version is updated.
+----------------------------------------------------------------------
+
+	Upgraded from Bootstrap 5.3.2 to Bootstrap 5.3.3 (latest version).
+
+----------------------------------------------------------------------
+2) Updated Remix Icons and Bootstrap Icons.
+----------------------------------------------------------------------
+
+	Please replace the 'RemixIcons' and 'bootstrap-icons' folders (Rootpath: assets/icon-fonts/*).
+
+----------------------------------------------------------------------
+3) Updated some JS files and added one new JS file.
+----------------------------------------------------------------------
+	Please update the following JS files (Rootpath: assets/js/*.js):
+
+		1.custom.js
+		2.defaultmenu.min.js 
+
+	Please add the following JS file (Rootpath: assets/js/*.js):
+
+		1.profile.js
+
+----------------------------------------------------------------------
+4) Added a new HTML page.
+----------------------------------------------------------------------
+	Add links_interactions.html file in html folder
+
+	For SCSS Users:-
+	-----------------
+
+		Replace the following scss files in the scss folder (src/assets/scss):
+
+		1) _typography.scss (src/assets/scss/util/_typography.scss)
+		2) _border.scss (src/assets/scss/util/_border.scss)
+
+	For CSS Users:-
+	-----------------
+
+		Replace the entire css folder in the assets folder (assets/css).
+
+----------------------------------------------------------------------
+5) Added new elements to the helpers.html page.
+----------------------------------------------------------------------
+	Replace helpers.html file (html/helpers.html)
+
+Thanking you,
+@spruko.
